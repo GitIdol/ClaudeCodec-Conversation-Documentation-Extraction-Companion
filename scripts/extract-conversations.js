@@ -132,6 +132,9 @@ for (const line of lines) {
             break;
           }
         }
+      } else if (typeof content === 'string' && content.trim()) {
+        // String content is text content!
+        hasTextContent = true;
       }
 
       // In clean mode, skip messages with no text content
@@ -158,6 +161,9 @@ for (const line of lines) {
             markdown += `*[Image attached]*\n\n`;
           }
         }
+      } else if (typeof content === 'string' && content.trim()) {
+        // Handle simple string content (most user messages)
+        markdown += `${content}\n\n`;
       }
 
       markdown += `---\n\n`;

@@ -19,7 +19,7 @@ PROJECT_NAME=$(basename "$PROJECT_DIR")
 CLAUDE_PROJECT_NAME=$(echo "$PROJECT_DIR" | sed 's|/|-|g' | sed 's| |-|g' | sed 's|^-||')
 CLAUDE_PROJECT_DIR="$HOME/.claude/projects/-$CLAUDE_PROJECT_NAME"
 ARCHIVE_DIR="$PROJECT_DIR/archived-conversations"
-SCRIPT_DIR="$PROJECT_DIR/scripts"
+SCRIPT_DIR="$HOME/bin/claude-tools"
 
 # Create archive directory if it doesn't exist
 mkdir -p "$ARCHIVE_DIR"
